@@ -24,6 +24,7 @@ body {
 }
 
 /* Navbar */
+.home-principal{
 .navbar {
   background-color: var(--azul);
   color: var(--branco);
@@ -77,7 +78,7 @@ h2, h3 {
   justify-content: space-between;
   align-items: center;
   padding: 4rem;
-  background-color: var(--branco);
+  background-color: var(--cinza-branco);
   flex-wrap: wrap;
   gap: 2rem;
   margin-bottom: 4rem;
@@ -238,4 +239,5 @@ h2, h3 {
   .logo img {
     max-width: 120px;
   }
+}
 }

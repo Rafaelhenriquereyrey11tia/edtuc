@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pong - Modelos Atômicos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="home-pong"> <!-- 👈 DIFERENCIA ESSA PÁGINA -->
+
+  <header class="navbar">
+    <div class="logo">
+      <img src="./Imagems/Logo/Logo completo.png" alt="Logo Átomos">
+    </div>
+    <nav>
+      <a href="#">Conteúdos</a>
+      <a href="#">Pong</a>
+      <a href="#">Sobre nós</a>
+      <a href="#">Envie seu feedback</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="card">
+      <h2>PONG</h2>
+      <p>Nesse jogo você deve marcar a maior quantidade de pontos com seus acertos nas perguntas feitas. 
+         Se precisar de instruções clique no botão abaixo.</p>
+      <div class="btn-container">
+        <button class="btn" onclick="startGame(1)">🎮 1 Jogador</button>
+        <button class="btn" onclick="startGame(2)">👥 2 Jogadores</button>
+        <button class="btn" onclick="showInstructions()">📖 Instruções</button>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    function startGame(mode) {
+      if(mode === 1) {
+        alert("Iniciando jogo no modo 1 Jogador (vs CPU)...");
+      } else {
+        alert("Iniciando jogo no modo 2 Jogadores...");
+      }
+    }
+
+    function showInstructions() {
+      alert("Instruções: Mova a raquete para rebater a bola. Quando marcar ponto, responda à pergunta para confirmar!");
+    }
+  </script>
+</body>
+</html>
