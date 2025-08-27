@@ -1,15 +1,5 @@
-:root {
-  --azul: #093B5E;
-  --azul-claro: #1A5C8A;
-  --azul-escuro: #06314E;
-  --azul-meio: #083A55;
-  --amarelo: #FFC72C;
-  --amarelo-escuro: #FFB703;
-  --laranja: #FB8500;
-  --branco: #FFFFFF;
-  --cinza-branco: #DAE2E7;
-  --preto: #000000;
-}
+@import url(./base.css);
+
 
 html {
   font-size: 62.5%;
@@ -43,7 +33,7 @@ body {
 }
 
 .logo img {
-  max-width: 150px;
+  max-width: 15rem;
   height: auto;
 }
 
@@ -103,7 +93,7 @@ h2, h3 {
   font-size: 1.6rem;
   cursor: pointer;
   margin-top: 1.5rem;
-  border-radius: 5px;
+  border-radius: 0.5rem;
 }
 
 .intro-text button:hover {
@@ -117,7 +107,7 @@ h2, h3 {
   padding: 2rem;
   border-radius: 10px;
   max-width: 40%;
-  min-width: 280px;
+  min-width: 28rem;
   flex: 1;
   margin-bottom: 2rem;
 }
@@ -146,7 +136,7 @@ h2, h3 {
   background-color: var(--azul);
   color: var(--branco);
   padding: 2rem;
-  border-radius: 10px;
+  border-radius: 1em;
   margin-top: 2rem;
 }
 
@@ -160,13 +150,13 @@ h2, h3 {
 
 .linha-modelos div {
   text-align: center;
-  flex: 1 1 120px;
+  flex: 1 1 12rem;
   margin: 1rem;
 }
 
 /* 🔹 Menor no desktop, maior no mobile */
 .linha-modelos img {
-  max-width: 150px;
+  max-width: 15rem;
   width: 100%;
   height: auto;
 }
@@ -183,7 +173,7 @@ h2, h3 {
 
 .sobre-texto {
   max-width: 50%;
-  min-width: 280px;
+  min-width: 28rem;
   flex: 1;
 }
 
@@ -192,52 +182,10 @@ h2, h3 {
 }
 
 /* Responsividade */
-@media (max-width: 768px) {
-  .intro, .sobre {
-    flex-direction: column;
-    text-align: center;
-  }
 
-  .intro-text, .sobre-texto, .card {
-    max-width: 100%;
-  }
+  
 
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .navbar nav {
-    margin-top: 1rem;
-  }
-
-  /* aumenta no tablet */
-  .linha-modelos img {
-    max-width: 200px;
-  }
 }
 
-@media (max-width: 480px) {
-  html {
-    font-size: 55%;
-  }
 
-  .navbar {
-    padding: 1rem 2rem;
-  }
 
-  .intro, .conteudos, .sobre {
-    padding: 2rem;
-  }
-
-  /* ainda maior no mobile */
-  .linha-modelos img {
-    max-width: 300px;
-  }
-
-  /* logo um pouco maior no mobile */
-  .logo img {
-    max-width: 120px;
-  }
-}
-}
