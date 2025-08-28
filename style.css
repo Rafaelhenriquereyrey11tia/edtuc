@@ -26,36 +26,49 @@ body {
   margin-bottom: 2rem;
 }
 
+/* Logo */
 .logo {
   display: flex;
-  flex-direction: column;
-  margin-bottom: 1rem;
+  align-items: center;
+  height: 100%;
 }
 
 .logo img {
-  max-width: 15rem;
-  height: auto;
+  height: 7.5rem;
+  width: auto;
+  max-width: 100%;
+  transform: none;
+  margin-top: 0.2rem;
 }
 
-.navbar nav {
+/* Barra de navegação com links - fundo azul claro */
+.nav-bar {
+  background-color: var(--azul-claro);
+  height: 3.5rem;
   display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  margin-top: 0.5rem;
-  justify-content: center;
-  width: 100%;
+  justify-content: center; /* Centraliza os links */
+  align-items: center;
+  padding: 0 2rem;
+  box-sizing: border-box;
+  gap: 2rem;
 }
 
-/* 🔹 Agora as âncoras estão na cor --amarelo */
-.navbar nav a {
+/* Links do navbar */
+.nav-bar a {
   color: var(--amarelo);
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 3.5rem;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  cursor: pointer;
 }
-
-.navbar nav a:hover {
+.nav-bar a:hover {
   text-decoration: underline;
 }
+
 
 /* Títulos */
 h2, h3 {
