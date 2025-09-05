@@ -1,0 +1,87 @@
+:root {
+  --azul: #093B5E;
+  --azul-claro: #1A5C8A;
+  --azul-escuro: #06314E;
+  --azul-meio: #083A55;
+  --amarelo: #FFC72C;
+  --amarelo-escuro: #FFB703;
+  --laranja: #FB8500;
+  --branco: #FFFFFF;
+  --cinza-branco: #DAE2E7;
+  --preto: #000000;
+}
+   body.instrucoes-pong main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 6rem);
+  }
+  
+  body.instrucoes-pong .card-instrucoes {
+    background: var(--cinza-branco);
+    padding: 3rem;
+    border-radius: 1rem;
+    max-width: 45rem;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.2);
+  }
+  
+  body.instrucoes-pong h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--azul);
+    font-size: 2.4rem;
+  }
+  
+  body.instrucoes-pong p,
+  body.instrucoes-pong ul {
+    font-size: 1.6rem;
+    margin: 1rem 0;
+  }
+  
+  body.instrucoes-pong ul {
+    margin-left: 2rem;
+  }
+  
+  body.instrucoes-pong .voltar {
+    font-size: 1.4rem;
+    color: var(--azul-meio);
+  }
+  
+  body.instrucoes-pong .btn {
+    display: block;
+    margin: 2rem auto 0;
+    background: var(--amarelo);
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1.6rem;
+  }
+  
+  body.instrucoes-pong .btn:hover {
+    background: var(--amarelo-escuro);
+  }
+
+  .navbar {
+    background-color: var(--azul-escuro);
+  }
+  
+   .ancoras {
+    display: flex;
+    text-align: center;
+    padding-block: 2rem;
+    margin: 2rem auto 0;
+    background: var(--azul-claro);
+    padding: 1rem 2rem;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1.6rem;
+    font-style: var(--amarelo);
+    text-decoration: none;
+    font-weight: 500;
+    color: var(--amarelo);
+    text-decoration: none;
+    font-weight: 500;
+  }

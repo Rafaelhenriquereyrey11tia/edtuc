@@ -76,14 +76,30 @@ body {
   padding: 4rem 2rem;
 }
 
-/* Estilo dos blocos de cientistas */
-.dalton, .thomson, .rutherford, .bohr {
+
+.dalton {
   background-color: var(--azul);
   border-radius: 1rem;
   padding: 2rem;
   max-width: 80rem;
   text-align: center;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px var(--branco);
+  color: var(--branco);
+  margin-bottom: 20rem;
+  margin-top: 5rem;
+  margin-left: 25rem;
+}
+
+ .thomson, .rutherford, .bohr{
+  background-color: var(--azul);
+  border-radius: 1rem;
+  padding: 2rem;
+  max-width: 80rem;
+  text-align: center;
+  box-shadow: 0 4px 10px var(--branco);
+  color: var(--branco);
+  margin-bottom: 20rem;
+  margin-left: 25rem;
 }
 
 .dalton img, .thomson img, .rutherford img, .bohr img {
