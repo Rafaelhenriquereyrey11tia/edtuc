@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --azul: #093B5E;
+  --azul-claro: #1A5C8A;
+  --azul-escuro: #06314E;
+  --azul-meio: #083A55;
+  --amarelo: #FFC72C;
+  --amarelo-escuro: #FFB703;
+  --laranja: #FB8500;
+  --branco: #FFFFFF;
+  --cinza-branco: #DAE2E7;
+  --preto: #000000;
+}
+
+body {
+  background-color: var(--cinza-branco);
+  font-family: 'Rubik', sans-serif;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.logo img {
+  height: 7.5rem;
+  width: auto;
+  max-width: 100%;
+  margin-top: 0.2rem;
+}
+
+/* Barra superior */
+.top-bar {
+  background-color: var(--azul);
+  height: 7rem;
+  display: flex;
+  align-items: center;
+  padding-left: 2rem;
+}
+
+/* Barra de navegação */
+.nav-bar {
+  background-color: var(--azul-claro);
+  height: 3.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-bar a {
+  color: var(--amarelo);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+
+.nav-bar a:hover {
+  text-decoration: underline;
+}
+
+/* Seção principal */
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+  padding: 4rem 2rem;
+}
+
+/* Estilo dos blocos de cientistas */
+.dalton, .thomson, .rutherford, .bohr {
+  background-color: var(--azul);
+  border-radius: 1rem;
+  padding: 2rem;
+  max-width: 80rem;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.dalton img, .thomson img, .rutherford img, .bohr img {
+  width: 38rem;
+  max-width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.dalton h1, .thomson h1, .rutherford h1, .bohr h1 {
+  font-size: 2.4rem;
+  color: var(--azul);
+  margin-bottom: 1rem;
+}
+
+.dalton p, .thomson p, .rutherford p, .bohr p {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+/* Botões */
+.dalton button, .thomson button, .rutherford button, .bohr button {
+  background-color: var(--amarelo);
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.6rem;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.dalton button:hover, .thomson button:hover, .rutherford button:hover, .bohr button:hover {
+  background-color: var(--amarelo-escuro);
+}
