@@ -1,4 +1,15 @@
-
+:root {
+  --azul: #093B5E;
+  --azul-claro: #1A5C8A;
+  --azul-escuro: #06314E;
+  --azul-meio: #083A55;
+  --amarelo: #FFC72C;
+  --amarelo-escuro: #FFB703;
+  --laranja: #FB8500;
+  --branco: #FFFFFF;
+  --cinza-branco: #DAE2E7;
+  --preto: #000000;
+}
    body.instrucoes-pong main {
     display: flex;
     justify-content: center;
@@ -51,4 +62,26 @@
   body.instrucoes-pong .btn:hover {
     background: var(--amarelo-escuro);
   }
+
+  .navbar {
+    background-color: var(--azul-escuro);
+  }
   
+   .ancoras {
+    display: flex;
+    text-align: center;
+    padding-block: 2rem;
+    margin: 2rem auto 0;
+    background: var(--azul-claro);
+    padding: 1rem 2rem;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1.6rem;
+    font-style: var(--amarelo);
+    text-decoration: none;
+    font-weight: 500;
+    color: var(--amarelo);
+    text-decoration: none;
+    font-weight: 500;
+  }
