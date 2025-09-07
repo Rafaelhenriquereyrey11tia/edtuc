@@ -1,0 +1,190 @@
+@import url("cores.css");
+
+body {
+  margin: 0;
+  background-color: var(--cinza-branco);
+  font-family: Arial, sans-serif;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+.container {
+  position: relative;
+  width: 1920px;
+  height: 1080px;
+  margin: 0 auto;
+  background: var(--cinza-branco);
+}
+
+/* TOPO */
+.topo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1920px;
+  height: 166px;
+  background: var(--azul);
+}
+
+/* SETAS */
+.seta-esquerda {
+  position: absolute;
+  top: 55px;
+  left: 40px;
+  width: 190px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.seta-direita {
+  position: absolute;
+  top: 40px;
+  right: 30px;
+  width: 195px;
+  height: 50px;
+  cursor: pointer;
+}
+
+/* TÍTULO */
+.titulo {
+  position: absolute;
+  left: 100px;
+  top: 200px;
+  font-size: 48px;
+  font-weight: bold;
+  color: var(--azul-escuro);
+  margin: 0;
+}
+
+/* BOX TEXTO */
+.box-texto {
+  position: absolute;
+  left: 100px;
+  top: 300px;
+  width: 1709px;
+  height: 250px;
+  background: var(--azul-meio);
+  border-radius: 20px;
+  color: var(--branco);
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.img-dalton {
+  width: 15rem;
+  height: 15rem;
+  margin-right: 40px;
+  flex-shrink: 0;
+}
+
+.box-texto p {
+  font-size: 22px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.box-texto strong {
+  color: var(--amarelo);
+}
+
+.box-texto .azul {
+  color: var(--azul-claro);
+  font-weight: bold;
+}
+
+.box-texto .amarelo {
+  color: var(--amarelo);
+  font-weight: bold;
+}
+
+/* BOX BOTÕES */
+.box-botoes {
+  position: absolute;
+  left: 100px;
+  top: 663px;
+  width: 1709px;
+  height: 165px;
+  background: #1D2731;
+  border-radius: 50px;
+}
+
+/* TEXTO DENTRO DA BOX */
+.texto-botoes {
+  position: absolute;
+  left: 148px;
+  top: 718px;
+  width: 832px;
+  height: 40px;
+  font-size: 35px;
+  margin: 0;
+  color: var(--branco);
+}
+
+.texto-botoes strong {
+  color: var(--amarelo);
+}
+
+/* BOTÕES */
+.btn-mapa {
+  position: absolute;
+  left: 1034px;
+  top: 697px;
+  width: 266px;
+  height: 97px;
+  background: var(--amarelo);
+  border-radius: 12px;
+  text-align: center;
+  line-height: 97px;
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--preto);
+  text-decoration: none;
+}
+
+.btn-video {
+  position: absolute;
+  left: 1409px;
+  top: 697px;
+  width: 266px;
+  height: 97px;
+  background: var(--amarelo);
+  border-radius: 12px;
+  text-align: center;
+  line-height: 97px;
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--preto);
+  text-decoration: none;
+}
+
+/* IMAGENS FINAIS */
+.img-mapa {
+  position: absolute;
+  left: 100px;
+  top: 860px;
+  width: 800px;
+  height: auto;
+  border-radius: 12px;
+}
+
+.img-video {
+  position: absolute;
+  right: 100px;
+  top: 860px;
+  width: 800px;
+  height: auto;
+  border-radius: 12px;
+}
+
+.seta-topo-esquerda {
+  position: absolute;
+  top: 50px;       /* distância do topo */
+  right: 12rem;    /* fica à esquerda da seta direita */
+  width: 100px;     /* tamanho menor e proporcional */
+  height: 32px;
+  cursor: pointer;
+}

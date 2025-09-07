@@ -24,13 +24,6 @@ body {
   background: var(--azul);
 }
 
-.seta-esquerda {
-  position: absolute;
-  left: 9px;
-  top: 44px;
-  width: 77px;
-  height: 77px;
-}
 
 .seta-direita {
   position: absolute;
@@ -110,7 +103,7 @@ body {
   top: 718px;
   width: 832px;
   height: 40px;
-  font-size: 24px;
+  font-size: 30px;
   margin: 0;
   color: var(--branco);
 }
@@ -183,9 +176,9 @@ html, body {
 
 .seta-esquerda {
   position: absolute;
-  top: 40px;
+  top: 55px;
   left: 40px;
-  width: 8rem;
+  width: 10rem;
   height: 50px;
   cursor: pointer;
 }
