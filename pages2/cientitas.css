@@ -82,46 +82,122 @@ body {
   border-radius: 1rem;
   padding: 2rem;
   max-width: 80rem;
-  text-align: center;
+  display: grid;
+  grid-template-columns: auto 1fr; /* coluna da imagem + coluna do texto */
+  grid-template-rows: auto auto auto; /* título/texto, botão, último texto */
+  gap: 1rem 2rem; /* espaçamento entre linhas e colunas */
   box-shadow: 0 4px 10px var(--branco);
   color: var(--branco);
-  margin-bottom: 20rem;
-  margin-top: 5rem;
-  margin-left: 25rem;
+  margin: 5rem auto 20rem;
+  align-items: start;
 }
 
- .thomson, .rutherford, .bohr{
+.dalton img {
+  grid-row: 1 / span 3; /* imagem ocupa todas as linhas */
+  width: 20rem;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+.dalton h1 {
+  margin: 0;
+  color: var(--amarelo);
+  font-size: 2.4rem;
+}
+
+.dalton p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+.dalton a {
+  grid-column: 2; /* botão na coluna do texto */
+}
+
+
+.dalton button {
+  background-color: var(--amarelo);
+  border: none;
+  padding: 1rem 2rem;       /* mesmo padding do Thomson */
+  font-size: 1.6rem;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;              
+  max-width: 20rem;
+  margin-left: 10rem;
+}
+.dalton button:hover {
+  background-color: var(--amarelo-escuro);
+}
+
+.dalton p:last-of-type {
+  grid-column: 1 / -1; /* último parágrafo ocupa toda a largura */
+  margin-top: 1rem;
+}
+
+
+.thomson {
   background-color: var(--azul);
   border-radius: 1rem;
   padding: 2rem;
   max-width: 80rem;
-  text-align: center;
+  display: grid;
+  grid-template-columns: auto 1fr; /* imagem + texto */
+  grid-template-rows: auto auto auto; /* título/texto, botão, último texto */
+  gap: 1rem 2rem;
   box-shadow: 0 4px 10px var(--branco);
   color: var(--branco);
-  margin-bottom: 20rem;
-  margin-left: 25rem;
+  margin: 5rem auto 20rem;
+  align-items: start;
 }
 
-.dalton img, .thomson img, .rutherford img, .bohr img {
-  width: 38rem;
-  max-width: 100%;
-  margin-bottom: 1.5rem;
+.thomson img {
+  grid-row: 1 / span 3; /* imagem ocupa todas as linhas */
+  width: 15rem;
+  height: auto;
+  border-radius: 0.5rem;
 }
 
-.dalton h1, .thomson h1, .rutherford h1, .bohr h1 {
+.thomson h1 {
+  margin: 0;
+  color: var(--amarelo);
   font-size: 2.4rem;
-  color: var(--azul);
-  margin-bottom: 1rem;
 }
 
-.dalton p, .thomson p, .rutherford p, .bohr p {
+.thomson p {
   font-size: 1.6rem;
-  margin-bottom: 1rem;
   line-height: 1.5;
 }
 
+.thomson a {
+  grid-column: 2; /* botão na coluna do texto */
+}
+
+.thomson button {
+  background-color: var(--amarelo);
+  border: none;
+  padding: 1rem 2rem;       /* mesmo padding do Dalton */
+  font-size: 1.6rem;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;              /* botão ocupa toda a largura da coluna */
+  max-width: 20rem;         /* limita para não ficar gigante */
+}
+
+.thomson button:hover {
+  background-color: var(--amarelo-escuro);
+}
+
+.thomson p:last-of-type {
+  grid-column: 1 / -1; /* último parágrafo ocupa as duas colunas */
+  margin-top: 1rem;
+}
 /* Botões */
-.dalton button, .thomson button, .rutherford button, .bohr button {
+ .thomson button{
   background-color: var(--amarelo);
   border: none;
   padding: 1rem 2rem;
@@ -129,10 +205,73 @@ body {
   font-weight: bold;
   border-radius: 0.5rem;
   cursor: pointer;
-  margin-bottom: 1rem;
   transition: background-color 0.3s ease;
+  margin-left: 10rem;
 }
 
-.dalton button:hover, .thomson button:hover, .rutherford button:hover, .bohr button:hover {
+ .thomson button:hover {
   background-color: var(--amarelo-escuro);
 }
+
+.rutherford, .bohr{
+    background-color: var(--azul);
+  border-radius: 1rem;
+  padding: 2rem;
+  max-width: 80rem;
+  display: grid;
+  grid-template-columns: auto 1fr; /* imagem + texto */
+  grid-template-rows: auto auto auto; /* título/texto, botão, último texto */
+  gap: 1rem 2rem;
+  box-shadow: 0 4px 10px var(--branco);
+  color: var(--branco);
+  margin: 5rem auto 20rem;
+  align-items: start;
+}
+
+.rutherford img, .bohr img{
+  grid-row: 1 / span 3; /* imagem ocupa todas as linhas */
+  width: 15rem;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+.rutherford h1, .bohr h1{
+  margin: 0;
+  color: var(--amarelo);
+  font-size: 2.4rem;
+}
+
+ .rutherford p, .bohr p{
+  font-size: 1.6rem;
+  line-height: 1.5;
+ }
+
+ .rutherford a, .bohr a{
+  grid-column: 2;
+ }
+
+
+ .rutherford button, .bohr button {
+  background-color: var(--amarelo);
+  border: none;
+  padding: 1rem 2rem;       /* mesmo padding do Dalton */
+  font-size: 1.6rem;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;              /* botão ocupa toda a largura da coluna */
+  max-width: 20rem;
+  margin-left: 10rem;
+}
+ 
+
+ .rutherford button:hover, .bohr button:hover{
+  background-color: var(--amarelo-escuro);
+ }
+
+ .rutherford p:last-of-type, .bohr p:last-of-type{
+  grid-column: 1 / -1; /* último parágrafo ocupa as duas colunas */
+  margin-top: 1rem;
+
+ }
