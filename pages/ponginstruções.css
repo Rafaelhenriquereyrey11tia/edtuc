@@ -2,93 +2,128 @@
   --azul: #093B5E;
   --azul-claro: #1A5C8A;
   --azul-escuro: #06314E;
-  --azul-meio: #083A55;
   --amarelo: #FFC72C;
   --amarelo-escuro: #FFB703;
-  --laranja: #FB8500;
   --branco: #FFFFFF;
   --cinza-branco: #DAE2E7;
   --preto: #000000;
 }
-   body.instrucoes-pong main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: calc(100vh - 6rem);
-    background-color: var(--cinza-branco);
-  }
-  
-  body.instrucoes-pong .card-instrucoes {
-    background: var(--cinza-branco);
-    padding: 3rem;
-    border-radius: 1rem;
-    max-width: 45rem;
-    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.2);
-  }
-  
-  body.instrucoes-pong h2 {
-    text-align: center;
-    margin-bottom: 2rem;
-    color: var(--azul);
-    font-size: 2.4rem;
-  }
-  
-  body.instrucoes-pong p,
-  body.instrucoes-pong ul {
-    font-size: 1.6rem;
-    margin: 1rem 0;
-  }
-  
-  body.instrucoes-pong ul {
-    margin-left: 2rem;
-  }
-  
-  body.instrucoes-pong .voltar {
-    font-size: 1.4rem;
-    color: var(--azul-meio);
-  }
-  
-  body.instrucoes-pong .btn {
-    display: block;
-    margin: 2rem auto 0;
-    background: var(--amarelo);
-    padding: 1rem 2rem;
-    border: none;
-    border-radius: 0.8rem;
-    font-weight: bold;
-    cursor: pointer;
-    font-size: 1.6rem;
-  }
-  
-  body.instrucoes-pong .btn:hover {
-    background: var(--amarelo-escuro);
-  }
 
-  .navbar {
-    background-color: var(--azul-escuro);
-  }
-  
-   .ancoras {
-    display: flex;
-    text-align: center;
-    padding-block: 2rem;
-    margin: 2rem auto 0;
-    background: var(--azul-claro);
-    padding: 1rem 2rem;
-    border: none;
-    font-weight: bold;
-    cursor: pointer;
-    font-size: 1.6rem;
-    font-style: var(--amarelo);
-    font-weight: 500;
-    color: var(--amarelo);
-    font-weight: 500;
-    justify-content: center;
-    gap: 2rem;
-    text-decoration: none;
-  }
+/* 🔹 Reset básico */
+body.instrucoes-pong {
+  margin: 0;
+  padding: 0;
+  background-color: var(--cinza-branco);
+  font-family: 'Roboto', sans-serif;
+}
 
-  .ancoras a {
-    text-decoration: none;
-    color: var(--amarelo);
-  }
+/* 🔹 Cabeçalho completo */
+.navbar {
+  background-color: var(--azul-escuro);
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* 🔹 Logo alinhada à esquerda */
+.logo {
+  padding: 1rem 2rem;
+}
+
+.logo img {
+  max-height: 4rem;
+  width: auto;
+  display: block;
+}
+
+/* 🔹 Navegação ocupando toda a largura */
+.ancoras {
+  width: 100vw;                  /* Ocupa toda a largura da tela */
+  display: flex;
+  justify-content: center;       /* 🔸 Centraliza os links horizontalmente */
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem 2rem;
+  background-color: var(--azul-claro);
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.ancoras a {
+  text-decoration: none;
+  color: var(--amarelo);
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: color 0.3s;
+}
+
+.ancoras a:hover {
+  color: var(--amarelo-escuro);
+}
+/* 🔹 Conteúdo principal */
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 10rem);
+  background-color: var(--cinza-branco);
+}
+
+/* 🔹 Caixa de instruções */
+.card-instrucoes {
+  background-color: var(--cinza-branco);
+  padding: 2.5rem;
+  border-radius: 1rem;
+  max-width: 45rem;
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.2);
+  margin: 0 auto;
+}
+
+.card-instrucoes h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--azul);
+  font-size: 2.4rem;
+}
+
+.card-instrucoes p,
+.card-instrucoes ul {
+  font-size: 1.6rem;
+  margin: 1rem 0;
+}
+
+.card-instrucoes ul {
+  margin-left: 2rem;
+}
+
+.voltar {
+  font-size: 1.4rem;
+  color: var(--azul-meio);
+}
+
+/* 🔹 Botão JOGAR */
+.btn {
+  display: block;
+  margin: 2rem auto 0;
+  background-color: var(--amarelo);
+  color: var(--preto);
+  padding: 0.8rem 1.6rem;
+  border: none;
+  border-radius: 0.6rem;
+  font-weight: bold;
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: background 0.3s;
+  text-decoration: none;
+  border: none;
+  outline: none;
+}
+
+
+.btn:hover {
+  background-color: var(--amarelo-escuro);
+}

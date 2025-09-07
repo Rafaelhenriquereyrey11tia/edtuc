@@ -1,98 +1,120 @@
 @import url(./base.css);
+
 :root {
-    --azul: #093B5E;
-    --azul-claro: #1A5C8A;
-    --azul-escuro: #06314E;
-    --azul-meio: #083A55;
-    --amarelo: #FFC72C;
-    --amarelo-escuro: #FFB703;
-    --laranja: #FB8500;
-    --branco: #FFFFFF;
-    --cinza-branco: #DAE2E7;
-    --preto: #000000;
-  }
+  --azul: #093B5E;
+  --azul-claro: #1A5C8A;
+  --azul-escuro: #06314E;
+  --azul-meio: #083A55;
+  --amarelo: #FFC72C;
+  --amarelo-escuro: #FFB703;
+  --laranja: #FB8500;
+  --branco: #FFFFFF;
+  --cinza-branco: #DAE2E7;
+  --preto: #000000;
+}
+
 body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: var(--cinza-branco);
-    color: var(--preto);
-  }
-  .logo{
-     display: flex;
-    flex-direction: column;
-    margin-bottom: 1rem;
-  }
-  
-  /* 🔹 Navbar igual em todas as páginas */
-  .navbar {
-    background-color: var(--azul);
-    color: var(--branco);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.5rem 4rem;
-    flex-wrap: wrap;
-    margin-bottom: 2rem;
-  }
-  
-  .navbar nav a {
-    color: var(--amarelo);
-    text-decoration: none;
-    font-weight: 500;
-  }
-  .navbar nav a:hover { text-decoration: underline; }
-  
-  /* ============================
-     HOME PRINCIPAL (index.html)
-     ============================ */
-  body.home-principal .intro {
-    display: flex;
-    justify-content: space-between;
-    padding: 4rem;
-    gap: 2rem;
-  }
-  
-  body.home-principal .card {
-    background-color: var(--azul);
-    color: var(--branco);
-    border-radius: 1rem;
-    padding: 2rem;
-  }
-  
-  /* ============================
-     HOME DO PONG (pong.html)
-     ============================ */
-  body.home-pong main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: calc(100vh - 6rem);
-  }
-  
-  body.home-pong .card {
-    background: var(--azul-meio);
-    color: var(--branco);
-    border-radius: 1rem;
-    padding: 3rem;
-    max-width: 40rem;
-    text-align: center;
-    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.2);
-  }
-  
-  body.home-pong .btn {
-    background: var(--amarelo);
-    border: none;
-    padding: 1rem 2rem;
-    font-size: 1.6rem;
-    border-radius: 0.8rem;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background 0.3s;
-    color: var(--preto);
-  }
-  
-  body.home-pong .btn:hover {
-    background: var(--amarelo-escuro);
-  }
-  
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--cinza-branco);
+  color: var(--preto);
+}
+
+/* 🔹 HEADER ESTILO ÁTOMOS */
+.navbar {
+  background-color: var(--azul);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Faixa superior: logo + título opcional */
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* 🔸 Alinha tudo à esquerda */
+  padding: 0.5rem 1rem;
+  gap: 1rem;
+}
+
+.logo img {
+  max-height: 4rem;
+  width: auto;
+  display: block;
+}
+/* Faixa inferior: navegação centralizada */
+.navbar nav {
+  background-color: var(--azul-claro);
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0.5rem 1rem;
+}
+
+.navbar nav a {
+  color: var(--amarelo);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.navbar nav a:hover {
+  color: var(--amarelo-escuro);
+}
+
+/* 🔹 CONTEÚDO PRINCIPAL DO PONG */
+body.home-pong main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 10rem);
+}
+
+.card {
+  background-color: var(--azul-meio);
+  color: var(--branco);
+  border-radius: 1rem;
+  padding: 3rem;
+  max-width: 40rem;
+  text-align: center;
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.2);
+}
+
+.card h2 {
+  margin-top: 0;
+  font-size: 2rem;
+}
+
+.card p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+/* 🔹 BOTÕES DO JOGO */
+.btn-container {
+  display: flex;
+  flex-direction: row;     /* 🔸 Alinha os botões na horizontal */
+  justify-content: center; /* 🔸 Centraliza os botões */
+  gap: 1rem;                /* 🔸 Espaço entre eles */
+  flex-wrap: wrap;         /* 🔸 Permite quebra de linha se necessário */
+}
+
+.btn {
+  background-color: var(--amarelo);
+  color: var(--preto);
+  border: none;
+  padding: 0.6rem 1rem;       /* 🔸 Menor largura horizontal */
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background 0.3s;
+  width: 10rem;               /* 🔸 Define largura fixa */
+  max-width: 100%;            /* 🔸 Garante que não ultrapasse o container */
+  margin: 0 auto;             /* 🔸 Centraliza o botão se estiver em bloco */
+}
+
+.btn:hover {
+  background-color: var(--amarelo-escuro);
+}
