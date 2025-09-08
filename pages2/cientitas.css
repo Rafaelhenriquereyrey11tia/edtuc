@@ -88,7 +88,7 @@ body {
   gap: 1rem 2rem; /* espaçamento entre linhas e colunas */
   box-shadow: 0 4px 10px var(--branco);
   color: var(--branco);
-  margin: 5rem auto 20rem;
+  margin: 5rem auto 7rem;
   align-items: start;
 }
 
@@ -149,7 +149,7 @@ body {
   gap: 1rem 2rem;
   box-shadow: 0 4px 10px var(--branco);
   color: var(--branco);
-  margin: 5rem auto 20rem;
+  margin: 5rem auto 7rem;
   align-items: start;
 }
 
@@ -186,6 +186,7 @@ body {
   transition: background-color 0.3s ease;
   width: 100%;              /* botão ocupa toda a largura da coluna */
   max-width: 20rem;         /* limita para não ficar gigante */
+   margin-left: 15rem;
 }
 
 .thomson button:hover {
@@ -197,17 +198,7 @@ body {
   margin-top: 1rem;
 }
 /* Botões */
- .thomson button{
-  background-color: var(--amarelo);
-  border: none;
-  padding: 1rem 2rem;
-  font-size: 1.6rem;
-  font-weight: bold;
-  border-radius: 0.5rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  margin-left: 10rem;
-}
+ 
 
  .thomson button:hover {
   background-color: var(--amarelo-escuro);
@@ -224,7 +215,7 @@ body {
   gap: 1rem 2rem;
   box-shadow: 0 4px 10px var(--branco);
   color: var(--branco);
-  margin: 5rem auto 20rem;
+  margin: 5rem auto 7rem;
   align-items: start;
 }
 
@@ -262,7 +253,7 @@ body {
   transition: background-color 0.3s ease;
   width: 100%;              /* botão ocupa toda a largura da coluna */
   max-width: 20rem;
-  margin-left: 10rem;
+  margin-left: 15rem;
 }
  
 
