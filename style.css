@@ -118,7 +118,6 @@ h2, h3 {
   text-align: center;
 }
 
-
 .intro-text p {
   font-size: 2.3rem;
   text-align: center;
@@ -160,7 +159,6 @@ h2, h3 {
   padding: 1rem;
   margin-left: 7.5rem;
   font-style: rubik;
-  
 }
 
 .card h3 {
@@ -184,11 +182,6 @@ h2, h3 {
   font-size: 2rem;
 }
 
-.conteudos li {
-  
-}
-
-
 .modelos {
   background-color: var(--azul);
   color: var(--branco);
@@ -196,7 +189,6 @@ h2, h3 {
   border-radius: 3rem;
   margin-left: 18 2rem;
   max-width: 57rem;
-  
 }
 
 .modelos h3 {
@@ -231,12 +223,18 @@ h2, h3 {
   flex-wrap: wrap;
   gap: 2rem;
   margin-bottom: 4rem;
+  font-size: 3rem;
 }
 
-.sobre-texto p {
+.sobre-texto {
   max-width: 50%;
   min-width: 280px;
   flex: 1;
+}
+
+.sobre-texto p {
+  font-size: 2.3rem;
+  color: var(--azul-escuro);
 }
 
 .sobre h2 {
