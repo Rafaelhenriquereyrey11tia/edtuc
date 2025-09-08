@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --azul: #093B5E;
+  --azul-claro: #1A5C8A;
+  --azul-escuro: #06314E;
+  --azul-meio: #083A55;
+  --amarelo: #FFC72C;
+  --amarelo-escuro: #FFB703;
+  --laranja: #FB8500;
+  --branco: #FFFFFF;
+  --cinza-branco: #DAE2E7;
+  --preto: #000000;
+}
+
+body {
+  background-color: var(--cinza-branco);
+  font-family: 'Rubik', sans-serif;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.logo img {
+  height: 7.5rem;
+  width: auto;
+  max-width: 100%;
+  margin-top: 0.2rem;
+}
+
+/* Barra superior */
+.top-bar {
+  background-color: var(--azul);
+  height: 7rem;
+  display: flex;
+  align-items: center;
+  padding-left: 2rem;
+}
+
+/* Barra de navegação */
+.nav-bar {
+  background-color: var(--azul-claro);
+  height: 3.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-bar a {
+  color: var(--amarelo);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+
+.nav-bar a:hover {
+  text-decoration: underline;
+}
+
+.sobn {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 4rem; /* aumenta o espaço entre os cards */
+  padding: 4rem 2rem;
+}
+
+.sobn div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 25rem;
+  background-color: var(--azul-meio); /* fundo azul no bloco inteiro */
+  border-radius: 1rem;
+  padding: 3rem 2rem 5rem;
+  color: var(--branco);
+   min-height: 50rem;
+}
+
+.sobn img {
+  width: 15rem;
+  height: 15rem;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 0.4rem solid var(--branco); /* borda branca para destacar */
+  margin-bottom: 1rem;
+}
+
+.sobn h1 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.sobn p {
+  font-size: 1.4rem;
+  text-align: center;
+  line-height: 1.6;
+  margin-top: 2rem;
+}
