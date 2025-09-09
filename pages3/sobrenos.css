@@ -92,7 +92,7 @@ body {
   height: 15rem;
   object-fit: cover;
   border-radius: 50%;
-  border: 0.4rem solid var(--branco); /* borda branca para destacar */
+  border: 0.4rem solid var(--azul-meio); /* borda branca para destacar */
   margin-bottom: 1rem;
 }
 
