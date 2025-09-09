@@ -174,7 +174,9 @@ h2, h3 {
 }
 
 .conteudos {  
-  align-items: center;
+  display: flex;                  
+  justify-content: space-between; 
+  align-items: flex-start;
   gap: 4rem;  
   padding: 4rem;
   margin-bottom: 4rem;
@@ -182,13 +184,43 @@ h2, h3 {
   font-size: 2rem;
 }
 
+.conteudos h2 {
+  color: var(--amarelo-escuro);
+  font-size: 4rem;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.conteudos ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.conteudos li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  font-size: 2.3rem;
+  color: var(--azul-escuro);
+}
+
+.conteudos li::before {
+  content: "✔";
+  color: var(--amarelo-escuro);
+  font-weight: bold;
+  margin-right: 1rem;
+  font-size: 2.5rem;
+}
+
+/* Card Modelos */
 .modelos {
   background-color: var(--azul);
   color: var(--branco);
   padding: 2rem;  
   border-radius: 3rem;
-  margin-left: 18 2rem;
   max-width: 57rem;
+  text-align: center;
 }
 
 .modelos h3 {
@@ -243,12 +275,12 @@ h2, h3 {
 
 /* Responsividade */
 @media (max-width: 768px) {
-  .intro, .sobre {
+  .intro, .sobre, .conteudos {
     flex-direction: column;
     text-align: center;
   }
 
-  .intro-text, .sobre-texto, .card {
+  .intro-text, .sobre-texto, .card, .modelos {
     max-width: 100%;
   }
 
