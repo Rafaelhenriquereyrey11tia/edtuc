@@ -11,7 +11,6 @@ var renderizacaoBola;
 var pontosRaquete1, pontosRaquete2, limitePontos;
 var jogador1, jogador2;
 
-//Linha do meio do campo
 desenhar.fillStyle = "white";
 desenhar.fillRect(0, 249, 1280, 3);
 const todasPerguntas = [
@@ -179,13 +178,11 @@ function movimentarBola()
     {
         X_bola -= taxaDeMovimentoBola;
         
-        //Testando se a bola invadiu o campo da raquete 1
         if(X_bola - raioBola <= 0)
         {
             contabilizarPonto(2);
         }
         
-        //Testando colisão da raquete 1 na extremidade de cima da bola
         if((Y_bola - raioBola <= Y_raquete1 + alturaRaquete) && (Y_bola - raioBola >= Y_raquete1))
         {
             if((X_bola >= X_raquete1) && (X_bola <= X_raquete1 + larguraRaquete))
@@ -196,7 +193,6 @@ function movimentarBola()
             }
         }
 
-        //Testando colisão da raquete 1 na extremidade de baixo da bola
         if((Y_bola + raioBola >= Y_raquete1) && (Y_bola + raioBola <= Y_raquete1 + alturaRaquete))
         {
             if((X_bola >= X_raquete1) && (X_bola <= X_raquete1 + larguraRaquete))
@@ -211,13 +207,11 @@ function movimentarBola()
     {
         X_bola += taxaDeMovimentoBola;
         
-        //Testando se a bola invadiu o campo da raquete 2
         if(X_bola + raioBola >= 1280)
         {
             contabilizarPonto(1);
         }
 
-        //Testando colisão da raquete 2 na extremidade de cima da bola
         if((Y_bola - raioBola <= Y_raquete2 + alturaRaquete) && (Y_bola - raioBola >= Y_raquete2))
         {
             if((X_bola >= X_raquete2) && (X_bola <= X_raquete2 + larguraRaquete))
@@ -228,7 +222,6 @@ function movimentarBola()
             }
         }
 
-        //Testando colisão da raquete 2 na extremidade de baixo da bola
         if((Y_bola + raioBola >= Y_raquete2) && (Y_bola + raioBola <= Y_raquete2 + alturaRaquete))
         {
             if((X_bola >= X_raquete2) && (X_bola <= X_raquete2 + larguraRaquete))
@@ -276,12 +269,12 @@ function movimentarBola()
 
 function mostrarPergunta(callback) {
   if (perguntasRestantes.length === 0) {
-    perguntasRestantes = [...todasPerguntas]; // Reinicia se todas foram usadas
+    perguntasRestantes = [...todasPerguntas]; 
   }
 
   const indice = Math.floor(Math.random() * perguntasRestantes.length);
   const pergunta = perguntasRestantes[indice];
-  perguntasRestantes.splice(indice, 1); // Remove a pergunta usada
+  perguntasRestantes.splice(indice, 1); 
 
   document.getElementById("texto-pergunta").innerText = pergunta.pergunta;
 
@@ -368,7 +361,7 @@ function captarMovimento(evento)
 
     switch(codigo)
     {
-        //Cima -> Raquete 1
+      
         case 87:
             if(Y_raquete1 > 0)
             {
@@ -376,7 +369,7 @@ function captarMovimento(evento)
             }
             break;
         
-        //Baixo -> Raquete 1
+     
         case 83:
             if(Y_raquete1 + alturaRaquete < 500)
             {
@@ -384,7 +377,7 @@ function captarMovimento(evento)
             }
             break;
         
-        //Baixo -> Raquete 2
+     
         case 40:
             if(Y_raquete2 + alturaRaquete < 500)
             {
@@ -392,7 +385,7 @@ function captarMovimento(evento)
             }
             break;
         
-        //Cima -> Raquete 2
+       
         case 38:
             if(Y_raquete2 > 0)
             {

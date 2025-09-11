@@ -14,7 +14,6 @@ body {
   background: var(--cinza-branco);
 }
 
-/* TOPO */
 .topo {
   position: absolute;
   left: 0;
@@ -33,7 +32,6 @@ body {
   height: 77px;
 }
 
-/* TÍTULO */
 .titulo {
   position: absolute;
   left: 100px;
@@ -44,7 +42,6 @@ body {
   margin: 0;
 }
 
-/* BOX TEXTO */
 .box-texto {
   position: absolute;
   left: 100px;
@@ -85,7 +82,6 @@ body {
   font-weight: bold;
 }
 
-/* BOX BOTÕES */
 .box-botoes {
   position: absolute;
   left: 100px;
@@ -96,7 +92,6 @@ body {
   border-radius: 50px;
 }
 
-/* TEXTO DENTRO DA BOX */
 .texto-botoes {
   position: absolute;
   left: 148px;
@@ -112,7 +107,6 @@ body {
   color: var(--amarelo);
 }
 
-/* BOTÕES */
 .btn-mapa {
   position: absolute;
   left: 1034px;
@@ -145,7 +139,6 @@ body {
   text-decoration: none;
 }
 
-/* IMAGEM MAPA MENTAL */
 .img-mapa {
   position: absolute;
   left: 100px;
@@ -155,7 +148,6 @@ body {
   border-radius: 12px;
 }
 
-/* IMAGEM VÍDEO */
 .img-video {
   position: absolute;
   right: 100px;

@@ -21,18 +21,17 @@ body {
   color: var(--preto);
 }
 
-/* 🔹 HEADER ESTILO ÁTOMOS */
 .navbar {
   background-color: var(--azul);
   display: flex;
   flex-direction: column;
 }
 
-/* Faixa superior: logo + título opcional */
+
 .topbar {
   display: flex;
   align-items: center;
-  justify-content: flex-start; /* 🔸 Alinha tudo à esquerda */
+  justify-content: flex-start; 
   padding: 0.5rem 1rem;
   gap: 1rem;
 }
@@ -42,7 +41,7 @@ body {
   width: auto;
   display: block;
 }
-/* Faixa inferior: navegação centralizada */
+
 .navbar nav {
   background-color: var(--azul-claro);
   display: flex;
@@ -63,7 +62,7 @@ body {
   color: var(--amarelo-escuro);
 }
 
-/* 🔹 CONTEÚDO PRINCIPAL DO PONG */
+
 body.home-pong main {
   display: flex;
   justify-content: center;
@@ -91,28 +90,27 @@ body.home-pong main {
   margin-bottom: 2rem;
 }
 
-/* 🔹 BOTÕES DO JOGO */
 .btn-container {
   display: flex;
-  flex-direction: row;     /* 🔸 Alinha os botões na horizontal */
-  justify-content: center; /* 🔸 Centraliza os botões */
-  gap: 1rem;                /* 🔸 Espaço entre eles */
-  flex-wrap: wrap;         /* 🔸 Permite quebra de linha se necessário */
+  flex-direction: row;     
+  justify-content: center; 
+  gap: 1rem;                
+  flex-wrap: wrap;         
 }
 
 .btn {
   background-color: var(--amarelo);
   color: var(--preto);
   border: none;
-  padding: 0.6rem 1rem;       /* 🔸 Menor largura horizontal */
+  padding: 0.6rem 1rem;      
   font-size: 1rem;
   font-weight: bold;
   border-radius: 0.5rem;
   cursor: pointer;
   transition: background 0.3s;
-  width: 10rem;               /* 🔸 Define largura fixa */
-  max-width: 100%;            /* 🔸 Garante que não ultrapasse o container */
-  margin: 0 auto;             /* 🔸 Centraliza o botão se estiver em bloco */
+  width: 10rem;              
+  max-width: 100%;            
+  margin: 0 auto;            
 }
 
 .btn:hover {

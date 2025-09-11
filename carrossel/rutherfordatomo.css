@@ -18,7 +18,6 @@ html, body {
   background: var(--cinza-branco);
 }
 
-/* TOPO */
 .topo {
   position: absolute;
   top: 0;
@@ -28,7 +27,6 @@ html, body {
   background: var(--azul);
 }
 
-/* SETAS */
 .seta-esquerda {
   position: absolute;
   top: 55px;
@@ -56,7 +54,6 @@ html, body {
   cursor: pointer;
 }
 
-/* TÍTULO */
 .titulo {
   position: absolute;
   left: 100px;
@@ -67,7 +64,6 @@ html, body {
   margin: 0;
 }
 
-/* BOX TEXTO */
 .box-texto {
   position: absolute;
   left: 100px;
@@ -110,7 +106,6 @@ html, body {
   font-weight: bold;
 }
 
-/* BOX BOTÕES */
 .box-botoes {
   position: absolute;
   left: 100px;
@@ -121,7 +116,6 @@ html, body {
   border-radius: 50px;
 }
 
-/* TEXTO DENTRO DA BOX */
 .texto-botoes {
   position: absolute;
   left: 148px;
@@ -137,7 +131,6 @@ html, body {
   color: var(--amarelo);
 }
 
-/* BOTÕES */
 .btn-mapa {
   position: absolute;
   left: 1034px;
@@ -170,7 +163,6 @@ html, body {
   text-decoration: none;
 }
 
-/* IMAGENS FINAIS */
 .img-mapa {
   position: absolute;
   left: 100px;

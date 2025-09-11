@@ -23,7 +23,6 @@ body {
   font-family: 'Rubik', sans-serif;
 }
 
-/* Logo */
 .logo {
   display: flex;
   align-items: center;
@@ -37,7 +36,6 @@ body {
   margin-top: 0.2rem;
 }
 
-/* Barra superior */
 .top-bar {
   background-color: var(--azul);
   height: 7rem;
@@ -46,7 +44,6 @@ body {
   padding-left: 2rem;
 }
 
-/* Barra de navegação */
 .nav-bar {
   background-color: var(--azul-claro);
   height: 3.5rem;
@@ -71,7 +68,7 @@ body {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 4rem; /* aumenta o espaço entre os cards */
+  gap: 4rem;
   padding: 4rem 2rem;
 }
 
@@ -80,7 +77,7 @@ body {
   flex-direction: column;
   align-items: center;
   max-width: 25rem;
-  background-color: var(--azul-meio); /* fundo azul no bloco inteiro */
+  background-color: var(--azul-meio); 
   border-radius: 1rem;
   padding: 3rem 2rem 5rem;
   color: var(--branco);
@@ -92,7 +89,7 @@ body {
   height: 15rem;
   object-fit: cover;
   border-radius: 50%;
-  border: 0.4rem solid var(--azul-meio); /* borda branca para destacar */
+  border: 0.4rem solid var(--azul-meio); 
   margin-bottom: 1rem;
 }
 

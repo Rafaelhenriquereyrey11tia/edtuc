@@ -9,7 +9,7 @@
   --preto: #000000;
 }
 
-/* 🔹 Reset básico */
+
 body.instrucoes-pong {
   margin: 0;
   padding: 0;
@@ -17,7 +17,7 @@ body.instrucoes-pong {
   font-family: 'Roboto', sans-serif;
 }
 
-/* 🔹 Cabeçalho completo */
+
 .navbar {
   background-color: var(--azul-escuro);
   width: 100%;
@@ -29,7 +29,7 @@ body.instrucoes-pong {
   align-items: flex-start;
 }
 
-/* 🔹 Logo alinhada à esquerda */
+
 .logo {
   padding: 1rem 2rem;
 }
@@ -40,11 +40,10 @@ body.instrucoes-pong {
   display: block;
 }
 
-/* 🔹 Navegação ocupando toda a largura */
 .ancoras {
-  width: 100vw;                  /* Ocupa toda a largura da tela */
+  width: 100vw;                 
   display: flex;
-  justify-content: center;       /* 🔸 Centraliza os links horizontalmente */
+  justify-content: center;       
   align-items: center;
   gap: 2rem;
   padding: 1rem 2rem;
@@ -64,7 +63,7 @@ body.instrucoes-pong {
 .ancoras a:hover {
   color: var(--amarelo-escuro);
 }
-/* 🔹 Conteúdo principal */
+
 main {
   display: flex;
   justify-content: center;
@@ -73,7 +72,7 @@ main {
   background-color: var(--cinza-branco);
 }
 
-/* 🔹 Caixa de instruções */
+
 .card-instrucoes {
   background-color: var(--cinza-branco);
   padding: 2.5rem;
@@ -105,7 +104,7 @@ main {
   color: var(--azul-meio);
 }
 
-/* 🔹 Botão JOGAR */
+
 .btn {
   display: block;
   margin: 2rem auto 0;

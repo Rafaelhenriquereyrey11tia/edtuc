@@ -23,7 +23,6 @@ body {
   font-family: 'Rubik', sans-serif;
 }
 
-/* Logo */
 .logo {
   display: flex;
   align-items: center;
@@ -37,7 +36,6 @@ body {
   margin-top: 0.2rem;
 }
 
-/* Barra superior */
 .top-bar {
   background-color: var(--azul);
   height: 7rem;
@@ -46,7 +44,6 @@ body {
   padding-left: 2rem;
 }
 
-/* Barra de navegação */
 .nav-bar {
   background-color: var(--azul-claro);
   height: 3.5rem;
@@ -67,7 +64,6 @@ body {
   text-decoration: underline;
 }
 
-/* Seção principal */
 .intro {
   display: flex;
   flex-direction: column;
@@ -83,9 +79,9 @@ body {
   padding: 2rem;
   max-width: 80rem;
   display: grid;
-  grid-template-columns: auto 1fr; /* coluna da imagem + coluna do texto */
-  grid-template-rows: auto auto auto; /* título/texto, botão, último texto */
-  gap: 1rem 2rem; /* espaçamento entre linhas e colunas */
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto auto; 
+  gap: 1rem 2rem; 
   box-shadow: 0 4px 10px var(--branco);
   color: var(--branco);
   margin: 5rem auto 7rem;
@@ -93,7 +89,7 @@ body {
 }
 
 .dalton img {
-  grid-row: 1 / span 3; /* imagem ocupa todas as linhas */
+  grid-row: 1 / span 3; 
   width: 20rem;
   height: auto;
   border-radius: 0.5rem;
@@ -111,14 +107,14 @@ body {
 }
 
 .dalton a {
-  grid-column: 2; /* botão na coluna do texto */
+  grid-column: 2; 
 }
 
 
 .dalton button {
   background-color: var(--amarelo);
   border: none;
-  padding: 1rem 2rem;       /* mesmo padding do Thomson */
+  padding: 1rem 2rem;       
   font-size: 1.6rem;
   font-weight: bold;
   border-radius: 0.5rem;
@@ -133,7 +129,7 @@ body {
 }
 
 .dalton p:last-of-type {
-  grid-column: 1 / -1; /* último parágrafo ocupa toda a largura */
+  grid-column: 1 / -1; 
   margin-top: 1rem;
 }
 
@@ -144,8 +140,8 @@ body {
   padding: 2rem;
   max-width: 80rem;
   display: grid;
-  grid-template-columns: auto 1fr; /* imagem + texto */
-  grid-template-rows: auto auto auto; /* título/texto, botão, último texto */
+  grid-template-columns: auto 1fr; 
+  grid-template-rows: auto auto auto; 
   gap: 1rem 2rem;
   box-shadow: 0 4px 10px var(--branco);
   color: var(--branco);
@@ -154,7 +150,7 @@ body {
 }
 
 .thomson img {
-  grid-row: 1 / span 3; /* imagem ocupa todas as linhas */
+  grid-row: 1 / span 3; 
   width: 15rem;
   height: auto;
   border-radius: 0.5rem;
@@ -172,20 +168,20 @@ body {
 }
 
 .thomson a {
-  grid-column: 2; /* botão na coluna do texto */
+  grid-column: 2; 
 }
 
 .thomson button {
   background-color: var(--amarelo);
   border: none;
-  padding: 1rem 2rem;       /* mesmo padding do Dalton */
+  padding: 1rem 2rem;       
   font-size: 1.6rem;
   font-weight: bold;
   border-radius: 0.5rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  width: 100%;              /* botão ocupa toda a largura da coluna */
-  max-width: 20rem;         /* limita para não ficar gigante */
+  width: 100%;              
+  max-width: 20rem;         
    margin-left: 15rem;
 }
 
@@ -194,11 +190,9 @@ body {
 }
 
 .thomson p:last-of-type {
-  grid-column: 1 / -1; /* último parágrafo ocupa as duas colunas */
+  grid-column: 1 / -1; 
   margin-top: 1rem;
 }
-/* Botões */
- 
 
  .thomson button:hover {
   background-color: var(--amarelo-escuro);
@@ -210,8 +204,8 @@ body {
   padding: 2rem;
   max-width: 80rem;
   display: grid;
-  grid-template-columns: auto 1fr; /* imagem + texto */
-  grid-template-rows: auto auto auto; /* título/texto, botão, último texto */
+  grid-template-columns: auto 1fr; 
+  grid-template-rows: auto auto auto; 
   gap: 1rem 2rem;
   box-shadow: 0 4px 10px var(--branco);
   color: var(--branco);
@@ -220,7 +214,7 @@ body {
 }
 
 .rutherford img, .bohr img{
-  grid-row: 1 / span 3; /* imagem ocupa todas as linhas */
+  grid-row: 1 / span 3; 
   width: 15rem;
   height: auto;
   border-radius: 0.5rem;
@@ -245,13 +239,13 @@ body {
  .rutherford button, .bohr button {
   background-color: var(--amarelo);
   border: none;
-  padding: 1rem 2rem;       /* mesmo padding do Dalton */
+  padding: 1rem 2rem;       
   font-size: 1.6rem;
   font-weight: bold;
   border-radius: 0.5rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  width: 100%;              /* botão ocupa toda a largura da coluna */
+  width: 100%;              
   max-width: 20rem;
   margin-left: 15rem;
 }
@@ -262,7 +256,7 @@ body {
  }
 
  .rutherford p:last-of-type, .bohr p:last-of-type{
-  grid-column: 1 / -1; /* último parágrafo ocupa as duas colunas */
+  grid-column: 1 / -1; 
   margin-top: 1rem;
 
  }

@@ -28,13 +28,12 @@ body {
   color: var(--preto);
 }
 
-/* Navbar geral */
+
 .nav-bar {
   width: 100%;
   margin-bottom: 2rem;
 }
 
-/* Top bar com logo - fundo azul escuro */
 .top-bar {
   background-color: var(--azul);
   height: 7rem;
@@ -44,7 +43,6 @@ body {
   box-sizing: border-box;
 }
 
-/* Logo */
 .logo {
   display: flex;
   align-items: center;
@@ -59,19 +57,17 @@ body {
   margin-top: 0.2rem;
 }
 
-/* Barra de navegação com links - fundo azul claro */
 .nav-bar {
   background-color: var(--azul-claro);
   height: 3.5rem;
   display: flex;
-  justify-content: center; /* Centraliza os links */
+  justify-content: center; 
   align-items: center;
   padding: 0 2rem;
   box-sizing: border-box;
   gap: 2rem;
 }
 
-/* Links do navbar */
 .nav-bar a {
   color: var(--amarelo);
   text-decoration: none;
@@ -88,12 +84,10 @@ body {
   text-decoration: underline;
 }
 
-/* Títulos */
 h2, h3 {
   font-family: 'Archivo', sans-serif;
 }
 
-/* Intro Section */
 .intro {
   display: flex;
   justify-content: space-between;
@@ -140,7 +134,6 @@ h2, h3 {
   background-color: var(--laranja);
 }
 
-/* Cards */
 .card {
   background-color: var(--azul);
   color: var(--branco);
@@ -213,7 +206,6 @@ h2, h3 {
   font-size: 2.5rem;
 }
 
-/* Card Modelos */
 .modelos {
   background-color: var(--azul);
   color: var(--branco);
@@ -240,14 +232,12 @@ h2, h3 {
   height: auto;
 }
 
-/* Menor no desktop, maior no mobile */
 .linha-modelos img {
   max-width: 150px;
   width: 100%;
   height: auto;
 }
 
-/* Sobre nós */
 .sobre {
   display: flex;
   justify-content: space-between;
@@ -273,7 +263,6 @@ h2, h3 {
   color: var(--amarelo-escuro);
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
   .intro, .sobre, .conteudos {
     flex-direction: column;
@@ -293,7 +282,6 @@ h2, h3 {
     margin-top: 1rem;
   }
 
-  /* aumenta no tablet */
   .linha-modelos img {
     max-width: 200px;
   }
@@ -312,13 +300,13 @@ h2, h3 {
     padding: 2rem;
   }
 
-  /* ainda maior no mobile */
   .linha-modelos img {
     max-width: 300px;
   }
 
-  /* logo um pouco maior no mobile */
   .logo img {
     max-width: 120px;
   }
 }
+
+
