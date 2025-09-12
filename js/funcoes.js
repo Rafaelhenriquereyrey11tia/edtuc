@@ -2,7 +2,7 @@ var tela = document.querySelector("canvas");
 var desenhar = tela.getContext("2d");
 var larguraRaquete = 10, alturaRaquete = 75;
 var X_raquete1, Y_raquete1, X_raquete2, Y_raquete2;
-var taxaDeMovimentoRaquete = 25, taxaDeMovimentoBola = 2;
+var taxaDeMovimentoRaquete = 3, taxaDeMovimentoBola = 2;
 var bateu, numeroBatidas, aumentoDeVelocidade = 0.2;
 var horizontal = {};
 var vertical = {};
@@ -10,6 +10,7 @@ var raioBola = 10, X_bola, Y_bola;
 var renderizacaoBola;
 var pontosRaquete1, pontosRaquete2, limitePontos;
 var jogador1, jogador2;
+var perguntaAtiva = false
 
 desenhar.fillStyle = "white";
 desenhar.fillRect(0, 249, 1280, 3);
@@ -89,6 +90,7 @@ const perguntasAtomicas = [
   }
 ];
 function mostrarPergunta(callback) {
+  perguntaAtiva = true
   const pergunta = perguntasAtomicas[Math.floor(Math.random() * perguntasAtomicas.length)];
   document.getElementById("texto-pergunta").innerText = pergunta.pergunta;
 
@@ -107,6 +109,7 @@ function mostrarPergunta(callback) {
         alert("❌ Resposta incorreta. Ponto não contabilizado.");
         callback(false);
       }
+      perguntaAtiva = true
     };
     opcoesDiv.appendChild(btn);
   });
@@ -355,6 +358,9 @@ function desenharRaquete2()
     desenhar.fillRect(X_raquete2, Y_raquete2, larguraRaquete, alturaRaquete);
 }
 
+let direction1 = 1
+let direction2 = 1
+
 function captarMovimento(evento)
 {
     var codigo = evento.keyCode;
@@ -363,34 +369,20 @@ function captarMovimento(evento)
     {
       
         case 87:
-            if(Y_raquete1 > 0)
-            {
-                Y_raquete1 -= taxaDeMovimentoRaquete;
-            }
+              direction1 = -1
+               // Y_raquete1 -= taxaDeMovimentoRaquete;
             break;
-        
-     
         case 83:
-            if(Y_raquete1 + alturaRaquete < 500)
-            {
-                Y_raquete1 += taxaDeMovimentoRaquete;
-            }
+              direction1 = 1
+                //Y_raquete1 += taxaDeMovimentoRaquete;
             break;
-        
-     
         case 40:
-            if(Y_raquete2 + alturaRaquete < 500)
-            {
-                Y_raquete2 += taxaDeMovimentoRaquete;
-            }
+            direction2 = 1
+              //Y_raquete2 += taxaDeMovimentoRaquete;
             break;
-        
-       
         case 38:
-            if(Y_raquete2 > 0)
-            {
-                Y_raquete2 -= taxaDeMovimentoRaquete;
-            }
+              direction2 = -1
+              //Y_raquete2 -= taxaDeMovimentoRaquete;
             break;
     }
 
@@ -406,6 +398,13 @@ function renderizarTela()
     desenharRaquete1();
     desenharRaquete2();
     desenharBola();
+
+    if (!perguntaAtiva) {
+      if ((Y_raquete1 > 0 || direction1 == 1) && (Y_raquete1 + alturaRaquete < 500 || direction1 == -1))
+      Y_raquete1 += direction1 * taxaDeMovimentoRaquete
+      if ((Y_raquete2 > 0 || direction2 == 1) && (Y_raquete2 + alturaRaquete < 500 || direction2 == -1))
+          Y_raquete2 += direction2 * taxaDeMovimentoRaquete
+    }
 } 
 
 
@@ -418,3 +417,4 @@ function limparTela()
 }
 
 document.onkeydown = captarMovimento;
+setInterval(renderizarTela, 1000 / 60)
