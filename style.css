@@ -127,7 +127,7 @@ h2, h3 {
   cursor: pointer;  
   margin-top: 1.5rem;
   border-radius: 0.5rem ;
-  margin-left: 36.7rem;
+  margin-left: 34.5rem;
 }
 
 .intro-text button:hover {
@@ -211,8 +211,10 @@ h2, h3 {
   color: var(--branco);
   padding: 2rem;  
   border-radius: 3rem;
-  max-width: 57rem;
+  max-width: 100rem;
   text-align: center;
+  height: 40rem;
+  width: 70rem;
 }
 
 .modelos h3 {
@@ -230,6 +232,7 @@ h2, h3 {
 .linha img {
   max-width: 100%;
   height: auto;
+  
 }
 
 .linha-modelos img {
