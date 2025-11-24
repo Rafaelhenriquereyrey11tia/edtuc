@@ -1,0 +1,115 @@
+/* Reset e cores */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --azul: #093B5E;
+  --azul-claro: #1A5C8A;
+  --azul-escuro: #06314E;
+  --amarelo: #FFC72C;
+  --amarelo-escuro: #FFB703;
+  --cinza-branco: #DAE2E7;
+  --branco: #FFFFFF;
+  --preto: #000000;
+}
+
+/* Página */
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--cinza-branco);
+  color: var(--azul-escuro);
+}
+
+/* Header */
+.nav-bar {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.top-bar {
+  background-color: var(--azul);
+  height: 7rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.logo img {
+  height: 6rem;
+  width: auto;
+}
+
+/* Formulário */
+.form-container {
+  max-width: 720px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-container h1 {
+  margin-bottom: 1.25rem;
+  font-size: 2rem;
+  color: var(--azul);
+  text-align: center;
+  width: 100%;
+}
+
+/* Labels alinhados com os inputs */
+label {
+  font-weight: bold;
+  margin-bottom: 0.4rem;
+  align-self: flex-start;
+  width: 100%;
+  max-width: 300px; /* mesma largura dos inputs */
+  margin-left: 200px;
+}
+
+/* Inputs compactos */
+input {
+  width: 100%;
+  max-width: 300px;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid var(--azul-claro);
+  border-radius: 6px;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  background: var(--branco);
+}
+
+/* Botão menor */
+button {
+  width: 100%;
+  max-width: 200px; /* reduzido */
+  padding: 0.8rem;
+  background-color: var(--azul-escuro);
+  color: var(--branco);
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-top: 0.5rem;
+}
+
+button:hover {
+  background-color: var(--azul-claro);
+}
+/* Link de recuperação */
+.form-container h3 {
+  margin-top: 1rem;
+  font-size: 1rem;
+  text-align: center;
+  width: 100%;
+}
+.form-container h3 a {
+  color: var(--azul-claro);
+  text-decoration: none;
+  font-weight: bold;
+}
+.form-container h3 a:hover { text-decoration: underline; }

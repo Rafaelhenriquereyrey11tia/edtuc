@@ -1,0 +1,129 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* Cores */
+:root {
+  --azul: #093B5E;
+  --azul-claro: #1A5C8A;
+  --azul-escuro: #06314E;
+  --amarelo: #FFC72C;
+  --amarelo-escuro: #FFB703;
+  --cinza-branco: #DAE2E7;
+  --branco: #FFFFFF;
+  --preto: #000000;
+}
+
+/* Página */
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--cinza-branco);
+  color: var(--azul-escuro);
+}
+
+/* Header ocupando toda a parte de cima */
+.nav-bar {
+  width: 100%;
+  position: sticky;   /* fica colado no topo ao rolar; use fixed se quiser sempre fixo */
+  top: 0;
+  z-index: 10;
+}
+
+.top-bar {
+  background-color: var(--azul);
+  height: 7rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* logo à esquerda, botão à direita */
+  padding: 0 2rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.logo img {
+  height: 6rem;  /* ajuste fino do tamanho */
+  width: auto;
+}
+
+/* Botão de ação no header (opcional) */
+.header-button {
+  background-color: var(--amarelo);
+  color: var(--preto);
+  padding: 0.9rem 1.8rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.header-button:hover { background-color: var(--amarelo-escuro); }
+
+/* Contêiner do formulário */
+.form-container {
+  max-width: 720px;      /* inputs mais longas */
+  margin: 2rem auto;     /* centraliza */
+  padding: 0 1rem;       /* respiro lateral no mobile */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;  /* mantém alinhado à esquerda */
+}
+
+/* Título */
+.form-container h1 {
+  margin-bottom: 1.25rem;
+  font-size: 2rem;
+  color: var(--azul);
+}
+
+/* Labels e inputs longos */
+label {
+  font-weight: bold;
+  margin-bottom: 0.4rem;
+}
+
+input {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--azul-claro);
+  border-radius: 6px;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  background: var(--branco);
+}
+
+/* Botão principal mais longo */
+.form-container button {
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--amarelo);
+  color: var(--preto);
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-top: 0.5rem;
+}
+.form-container button:hover { background-color: var(--amarelo-escuro); }
+
+/* Link "Já tem uma conta? Entre" */
+.form-container h3 {
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+.form-container h3 a {
+  color: var(--azul-claro);
+  text-decoration: none;
+  font-weight: bold;
+}
+.form-container h3 a:hover { text-decoration: underline; }
+
+.form-container h1,
+.form-container h3 {
+  text-align: center;
+  width: 100%;
+}
