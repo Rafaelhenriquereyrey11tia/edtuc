@@ -5,8 +5,9 @@ import mysql from "mysql2"
 const app = express()
 app.use(cors())
 app.use(express.json())
+const port = 3333
 app.get("/", (request, response) => {
-    const selectCommand = "SELECT name, email, age, nickname FROM heitorpereira_sala02ma"
+    const selectCommand = "SELECT name, email password FROM heitorpereira_sala02ma"
 
 database.query(selectCommand, (error, users) => {
     if(error){
@@ -25,7 +26,7 @@ app.post("/cadastrar", (request, response) => {
 
     const insertCommand = `
       INSERT INTO heitorpereira_sala02ma(name, email, password)
-      VALUES (?, ?, ?, ?, ?)
+      VALUES (?, ?, ?)
     `
 
     database.query(insertCommand, [name, email, password], (error) => {
