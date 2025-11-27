@@ -1,37 +1,29 @@
-const button = document.querySelector("button")
-button.onclick = (event) => {
-    event.preventDefault()
-    signUpKraken()
-}
+document.querySelector("#btn-cadastro").addEventListener("click", async (event) => {
+  event.preventDefault()
 
+  const name = document.querySelector("#name").value
+  const email = document.querySelector("#email").value
+  const password = document.querySelector("#senha").value
 
-async function signUpKraken() {
-   const name = document.querySelector("#name").value
-   const email = document.querySelector("#email").value
-   const password = document.querySelector("#password").value
-
-   if (name === "" || email === "" || password === ""){
+  if (name === "" || email === "" || password === "") {
     alert("PREENCHA TODAS AS INFORMAÇÕES, animal!")
     return
-   }
+  }
 
-   const user =  {
-    name,
-    email,
-    password
-   }
+  const user = { name, email, password }
 
-   const response = await fetch("http://localhost:3333/cadastrarEdutech", {
-    method: "POST",
-    headers: {
-        "Content-Type": "application/json"
-    },
-    body: JSON.stringify({ user })
-   }).then(response => response.json())
+  try {
+    const response = await fetch("http://localhost:8080/cadastrarEdutech", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ user })
+    })
 
-   const { message } = response
-
-   alert(message)
-
-   window.location.href = "../../index.html"
-}
+    const data = await response.json()
+    alert(data.message)
+    window.location.href = "/jogo.html"
+  } catch (error) {
+    alert("Erro ao cadastrar. Verifique o servidor.")
+    console.error(error)
+  }
+})

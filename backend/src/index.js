@@ -5,9 +5,17 @@ import mysql from "mysql2"
 const app = express()
 app.use(cors())
 app.use(express.json())
-const port = 3333
+const port = 8080
+
+const database = mysql.createPool({
+    host: "benserverplex.ddns.net",
+    user: "alunos",
+    password: "senhaAlunos",
+    database: "web_02ma",
+    connectionLimit: 10
+})
 app.get("/", (request, response) => {
-    const selectCommand = "SELECT name, email password FROM heitorpereira_sala02ma"
+    const selectCommand = "SELECT name, email, password FROM heitorpereira_sala02ma"
 
 database.query(selectCommand, (error, users) => {
     if(error){
@@ -21,7 +29,7 @@ database.query(selectCommand, (error, users) => {
 })
 
 
-app.post("/cadastrar", (request, response) => {
+app.post("/cadastrarEdutech", (request, response) => {
     const {name, email, password} =  request.body.user
 
     const insertCommand = `
@@ -45,12 +53,4 @@ app.post("/cadastrar", (request, response) => {
 
 app.listen(port, () => {
     console.log(`Servidor rodando na porta: ${port}!`)
-})
-
-const database = mysql.createPool({
-    host: "benserverplex.ddns.net",
-    user: "alunos",
-    password: "senhaAlunos",
-    database: "web_02ma",
-    connectionLimit: 10
 })
